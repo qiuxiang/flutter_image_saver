@@ -1,0 +1,23 @@
+name: flutter_image_saver_android
+description: The Android implementation of flutter_image_saver.
+version: 0.0.1
+homepage: https://github.com/qiuxiang/flutter_image_saver
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+  flutter: ">=1.20.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: qiuxiang.flutter.flutter_image_saver
+        pluginClass: FlutterImageSaverPlugin

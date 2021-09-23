@@ -1,12 +1,10 @@
 import 'dart:typed_data';
 
 import 'package:cross_file/cross_file.dart';
-import 'package:flutter/services.dart';
+import 'package:flutter_image_saver_android/flutter_image_saver_android.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:universal_platform/universal_platform.dart';
-
-final _channel = MethodChannel('flutter_image_saver');
 
 /// 图片数据另存为文件
 ///
@@ -27,12 +25,12 @@ Future<String> saveImage({
       if (!await Permission.storage.request().isGranted) {
         return '';
       }
-      path = '${await _channel.invokeMethod('getPicturesDirectory')}/$path';
+      path = '${await getPicturesDirectory()}/$path';
     }
   }
   await file.saveTo(path);
   if (UniversalPlatform.isAndroid) {
-    _channel.invokeMethod('scanFile', path.replaceAll('/$filename', ''));
+    scanFile(path.replaceAll('/$filename', ''));
   }
   return path;
 }

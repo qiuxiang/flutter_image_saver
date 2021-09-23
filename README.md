@@ -1,25 +1,6 @@
 # flutter_image_saver
 
-[![pub package](https://img.shields.io/pub/v/pay_pwd.svg)](https://pub.dartlang.org/packages/pay_pwd)
-
-一个简单可靠的图片保存库，用于将生成的图片数据另存为文件，利用 `XFile` 实现的跨平台支持。
-
-## 用法
-
-### Android
-
-在 `android/app/src/main/AndroidManifest.xml` 的 `application` 里加入属性 `android:requestLegacyExternalStorage="true"`
-。
-
-### Flutter
-
-```dart
-import 'package:flutter_image_saver/flutter_image_saver.dart';
-
-await saveImage(data: uint8List, filename: 'image.png');
-```
-
-## 实现细节
+[![pub package](https://img.shields.io/pub/v/flutter_image_saver.svg)](https://pub.dartlang.org/packages/flutter_image_saver)
 
 `XFile` 已经提供了可用的跨平台文件接口，包括 `fromData(data)`、`saveTo(path)`，在不需要权限的 web 和桌面端， 无需任何适配，仅使用 XFile
 已经可以很简单的实现图片数据另存为文件（默认保存到下载目录）。
@@ -34,6 +15,6 @@ await saveImage(data: uint8List, filename: 'image.png');
 
 3. 调用原生接口通知 android 系统更新图片索引。
 
-*虽然使用 Media 接口是更好的做法，但目前继续使用 io 接口写入文件也不是什么问题，只要符合规范*
+_虽然使用 Media 接口是更好的做法，但目前继续使用 io 接口写入文件也不是什么问题，只要符合规范_
 
 对于 ios，只能调用原生接口进行写入，目前暂未实现。

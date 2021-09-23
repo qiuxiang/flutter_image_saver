@@ -1,27 +1,21 @@
 name: flutter_image_saver
 description: Simple and effective cross platform image saver plugin for flutter.
-version: 0.0.1
-homepage: https://github.com/qiuxiang/flutter-image-saver
+version: 0.1.0
+homepage: https://github.com/qiuxiang/flutter_image_saver
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
   flutter: ">=1.20.0"
 
 dependencies:
-  cross_file: ^0.3.1+5
   flutter:
     sdk: flutter
-  path_provider: ^2.0.5
+  cross_file: ^0.3.1+5
+  path_provider: '>=2.0.0 <3.0.0'
   permission_handler: ^8.1.6
   universal_platform: ^1.0.0+1
+  flutter_image_saver_android: ^0.0.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
-flutter:
-  plugin:
-    platforms:
-      android:
-        package: qiuxiang.flutter.flutter_image_saver
-        pluginClass: FlutterImageSaverPlugin

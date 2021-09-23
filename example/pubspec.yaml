@@ -8,9 +8,8 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.2
-  permission_handler: ^8.1.6
   flutter_image_saver:
-    path: ../
+    path: ../packages/flutter_image_saver
 
 dev_dependencies:
   flutter_test:

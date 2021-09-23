@@ -3,7 +3,6 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_image_saver/flutter_image_saver.dart';
-import 'package:permission_handler/permission_handler.dart';
 
 void main() {
   runApp(App());
@@ -43,15 +42,13 @@ class _HomeState extends State<Home> {
   }
 
   void save() async {
-    if (await Permission.storage.request().isGranted) {
-      final boundary = repaintBoundary.currentContext!.findRenderObject()!
-          as RenderRepaintBoundary;
-      final image = await boundary.toImage(pixelRatio: 2);
-      final byteData = await image.toByteData(format: ImageByteFormat.png);
-      final path = await saveImage(
-          data: byteData!.buffer.asUint8List(), filename: 'flutter.png');
-      ScaffoldMessenger.of(context)
-          .showSnackBar(SnackBar(content: Text('Saved to $path')));
-    }
+    final boundary = repaintBoundary.currentContext!.findRenderObject()!
+        as RenderRepaintBoundary;
+    final image = await boundary.toImage(pixelRatio: 2);
+    final byteData = await image.toByteData(format: ImageByteFormat.png);
+    final path = await saveImage(
+        data: byteData!.buffer.asUint8List(), filename: 'flutter.png');
+    ScaffoldMessenger.of(context)
+        .showSnackBar(SnackBar(content: Text('Saved to $path')));
   }
 }
