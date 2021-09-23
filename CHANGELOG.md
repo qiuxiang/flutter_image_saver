@@ -1,3 +1,7 @@
+## 0.2.0
+
+Refactor.
+
 ## 0.1.0
 
 Refactor to multi packages.

@@ -1,17 +1,18 @@
 name: flutter_image_saver_example
-publish_to: 'none'
+publish_to: "none"
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
+  cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.2
   flutter_image_saver:
-    path: ../packages/flutter_image_saver
+    path: ..
 
 dev_dependencies:
+  flutter_lints: ^1.0.4
   flutter_test:
     sdk: flutter
 

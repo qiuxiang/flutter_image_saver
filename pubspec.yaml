@@ -1,6 +1,6 @@
-name: flutter_image_saver_android
-description: The Android implementation of flutter_image_saver.
-version: 0.0.1
+name: flutter_image_saver
+description: Simple and effective cross platform image saver for flutter, supported web and desktop.
+version: 0.2.0
 homepage: https://github.com/qiuxiang/flutter_image_saver
 
 environment:
@@ -10,6 +10,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  cross_file: ^0.3.1+5
+  path_provider: ">=2.0.0 <3.0.0"
+  permission_handler: ">=6.0.0 <9.0.0"
+  universal_platform: ^1.0.0+1
 
 dev_dependencies:
   flutter_test:

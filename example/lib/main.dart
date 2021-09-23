@@ -5,10 +5,12 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter_image_saver/flutter_image_saver.dart';
 
 void main() {
-  runApp(App());
+  runApp(const App());
 }
 
 class App extends StatelessWidget {
+  const App({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(home: Home());
@@ -46,8 +48,7 @@ class _HomeState extends State<Home> {
         as RenderRepaintBoundary;
     final image = await boundary.toImage(pixelRatio: 2);
     final byteData = await image.toByteData(format: ImageByteFormat.png);
-    final path = await saveImage(
-        data: byteData!.buffer.asUint8List(), filename: 'flutter.png');
+    final path = await saveImage(byteData!.buffer.asUint8List(), 'flutter.png');
     ScaffoldMessenger.of(context)
         .showSnackBar(SnackBar(content: Text('Saved to $path')));
   }
