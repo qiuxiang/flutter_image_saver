@@ -1,5 +1,9 @@
 name: pages
-on: [push]
+on:
+  push:
+    paths:
+      - lib
+      - example/lib
 jobs:
   pages:
     runs-on: ubuntu-latest
@@ -16,8 +20,7 @@ jobs:
           cd example
           flutter create --platforms web .
           flutter build web --base-href '/flutter_image_saver/'
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@4.1.4
+      - uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           branch: gh-pages
           folder: example/build/web
