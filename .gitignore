@@ -1,12 +1,6 @@
-.DS_Store
+.idea/
 .dart_tool/
-
 .packages
-.pub/
-
-build/
-
 .metadata
 pubspec.lock
 *.iml
-.idea/
