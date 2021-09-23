@@ -46,8 +46,7 @@ class _HomeState extends State<Home> {
     if (await Permission.storage.request().isGranted) {
       final boundary = repaintBoundary.currentContext!.findRenderObject()!
           as RenderRepaintBoundary;
-      final image = await boundary.toImage(
-          pixelRatio: MediaQuery.of(context).devicePixelRatio);
+      final image = await boundary.toImage(pixelRatio: 2);
       final byteData = await image.toByteData(format: ImageByteFormat.png);
       final path = await saveImage(
           data: byteData!.buffer.asUint8List(), filename: 'flutter.png');
