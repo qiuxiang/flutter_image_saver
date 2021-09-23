@@ -1,6 +1,6 @@
 name: flutter_image_saver
 description: Simple and effective cross platform image saver for flutter, supported web and desktop.
-version: 0.2.0
+version: 0.2.1
 homepage: https://github.com/qiuxiang/flutter_image_saver
 
 environment:
