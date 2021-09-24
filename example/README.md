@@ -2,7 +2,7 @@
 flutter create .
 ```
 
-## Android
+### Android
 
 `android/app/src/main/AndroidManifest.xml`:
 
