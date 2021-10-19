@@ -49,7 +49,8 @@ class _HomeState extends State<Home> {
     final image = await boundary.toImage(pixelRatio: 2);
     final byteData = await image.toByteData(format: ImageByteFormat.png);
     final path = await saveImage(byteData!.buffer.asUint8List(), 'flutter.png');
+    final message = path.isEmpty ? 'Saved' : 'Saved to $path';
     ScaffoldMessenger.of(context)
-        .showSnackBar(SnackBar(content: Text('Saved to $path')));
+        .showSnackBar(SnackBar(content: Text(message)));
   }
 }

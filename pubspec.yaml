@@ -25,3 +25,6 @@ flutter:
       android:
         package: qiuxiang.flutter.flutter_image_saver
         pluginClass: FlutterImageSaverPlugin
+      ios:
+        pluginClass: FlutterImageSaverPlugin
+
