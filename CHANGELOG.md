@@ -1,3 +1,7 @@
+## 1.0.0
+
+Add iOS support.
+
 ## 0.2.1
 
 Fix bug.
