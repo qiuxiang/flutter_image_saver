@@ -27,4 +27,3 @@ flutter:
         pluginClass: FlutterImageSaverPlugin
       ios:
         pluginClass: FlutterImageSaverPlugin
-

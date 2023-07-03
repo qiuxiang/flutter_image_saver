@@ -30,9 +30,19 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: RepaintBoundary(
-          key: repaintBoundary,
+      body: RepaintBoundary(
+        key: repaintBoundary,
+        child: Container(
+          width: double.infinity,
+          height: double.infinity,
+          decoration: const BoxDecoration(
+            color: Colors.white,
+            image: DecorationImage(
+              alignment: Alignment.topRight,
+              image: AssetImage('images/demo.jpg'),
+              fit: BoxFit.fitHeight,
+            ),
+          ),
           child: const FlutterLogo(size: 120),
         ),
       ),
